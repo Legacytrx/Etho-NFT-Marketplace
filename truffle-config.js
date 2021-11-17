@@ -8,12 +8,12 @@ module.exports = {
     networks: {
         dev: {
             provider: () => new HDWalletProvider(privateKey, "https://rpc.ether1.org"),
-			      networkCheckTimeout: 1000000000,
-      timeoutBlocks: 200,
+       networkCheckTimeout: 1000000000,
+       timeoutBlocks: 200,
             network_id: 1313114
         },
     },
-	  contracts_directory: './src/contracts',
+      contracts_directory: './src/contracts',
       contracts_build_directory: './src/abis',
   compilers: {
     solc: {
