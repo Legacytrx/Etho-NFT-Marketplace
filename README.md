@@ -77,25 +77,6 @@ Finally you just need to run the following command in your terminal to open the 
 $ npm start
 ```
 
-### Deployment on Public Network
-
-In order to deploy your smart contract, you must create your .env file and specify:
-
-- `PRIVATE_KEYS` --> Private Key of the account you are using to deploy (typically the first one in the list of Ganache)
-- `INFURA_API_KEY` --> API key provided by Infura: https://infura.io
-
-Then, you will need to run the following command (let's use the testnet Ropsten in this example, remember to request some Ether for your account using a faucet):
-
-```
-$ truffle migrate --network ropsten
-```
-
-Finally you can run the following command to generate the build artifacts of your User Interface and then deploy to your favourite host:
-
-```
-npm run build
-```
-
 
 ### Technology stack
 
