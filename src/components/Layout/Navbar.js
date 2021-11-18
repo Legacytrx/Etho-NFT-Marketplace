@@ -79,7 +79,7 @@ const Navbar = () => {
           {web3Ctx.account && 
             <a 
               className="nav-link small" 
-              href={`${etherscanUrl}/address/${web3Ctx.account}`}
+              href={`https://explorer.ethoprotocol.com/address/${web3Ctx.account}`}
               target="blank"
               rel="noopener noreferrer"
             >
