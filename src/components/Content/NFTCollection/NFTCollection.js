@@ -60,7 +60,7 @@ const NFTCollection = () => {
   };
  
   return(
-    <div className="row text-center">
+    <div className="justify-content-center row text-center d-flex align-items-end">
       {collectionCtx.collection.map((NFT, key) => {
         const index = marketplaceCtx.offers ? marketplaceCtx.offers.findIndex(offer => offer.id === NFT.id) : -1;
         const owner = index === -1 ? NFT.owner : marketplaceCtx.offers[index].user;
