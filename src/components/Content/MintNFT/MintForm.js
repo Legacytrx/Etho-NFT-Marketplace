@@ -123,7 +123,7 @@ const MintForm = () => {
         <div className="col-md-2">
           <input
             type='file'
-            accept='.gif,.png,.jpg,.jpeg'
+			accept='.gif,.png,.jpg,.jpeg'
             className={`${fileClass} mb-1`}
             onChange={captureFile}
           />
