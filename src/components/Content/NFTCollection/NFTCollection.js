@@ -71,7 +71,7 @@ const NFTCollection = () => {
             <div className={"card-body"}>       
               <h5 className="card-title">{NFT.title}</h5>
             </div>
-            <img src={`https://ipfs.infura.io/ipfs/${NFT.img}`} className="card-img-bottom" alt={`NFT ${key}`} />                         
+            <img src={`https://data.ethoprotocol.com/ipfs/${NFT.img}`} className="card-img-bottom" alt={`NFT ${key} not on ethofs yet, please wait.`} />                       
             <p className="fw-light fs-6">{`${owner.substr(0,7)}...${owner.substr(owner.length - 7)}`}</p>
             {index !== -1 ?
               owner !== web3Ctx.account ?
