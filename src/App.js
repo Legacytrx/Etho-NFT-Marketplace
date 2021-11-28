@@ -13,6 +13,7 @@ import logo from "./img/logo2.PNG";
 import Spinner from "./components/Layout/Spinner";
 import "./app.css";
 import ethonft_headline from "./img/ethonft_headline.png";
+import ethonft_gallery from "./img/ethonft_gallery.png";
 
 
 const App = () => {
@@ -282,10 +283,14 @@ const Homepage = () => {
     <div class="container-fluid container-main bg-dark h">
       <div className="row text-white">
         <div className="col w-50">
-          <img src={ethonft_headline} alt="Decentrlized Marketplace" width="100%"></img>
+          <img src={ethonft_headline} alt="Decentralized Marketplace" width="100%"></img>
+          <p class="font-monospace text-white fw-bold p-3">
+            Art is subjective, freedom is not
+          </p>
+          <p class="p-3">With ETHO You can mint, sell, buy and store NFTs on one and the same blockchain on a 100% decentrlized blockchain.</p>
         </div>
         <div className="col w-50">
-          Column 2
+          <img src={ethonft_gallery} alt="Decentrlized Marketplace" width="100%"></img>
         </div>
       </div>
     </div>
