@@ -4,7 +4,8 @@ import Web3Context from '../../store/web3-context';
 import MarketplaceContext from '../../store/marketplace-context';
 import web3 from '../../connection/web3';
 import { formatPrice } from '../../helpers/utils';
-import eth from "../../img/eth.png";
+import ethonft from "../../img/ethonft.png";
+import "./navbar.css";
 
 const Navbar = () => {
   const [fundsLoading, setFundsLoading] = useState(false);
@@ -47,10 +48,10 @@ const Navbar = () => {
 
   
   return (
-    <nav className="navbar navbar-expand-sm navbar-light bg-light p-0">
+    <nav className="navbar navbar-custom navbar-expand-sm navbar-light  p-0" >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
-          <img src={eth} alt="" width="64" height="64"></img>
+          <img src={ethonft} alt="" width="75%"></img>
         </a>
   
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -58,21 +59,26 @@ const Navbar = () => {
                 aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
+        <div className="container-fluid">
+          <form className="d-flex">
+            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </input>
+            <button className="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+  
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="/">Home</a>
+              <a className="nav-link text-white" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="Explore">Explore</a>
+              <a className="nav-link text-white" href="Explore">Explore</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="mint">Mint</a>
+              <a className="nav-link text-white" href="mint">Mint</a>
             </li>
   
-            <li className="nav-item">
-              <a className="nav-link disabled" href="/">Disabled</a>
-            </li>
           <li className="nav-item">
             {marketplaceCtx.userFunds > 0 && !fundsLoading &&
               <button
@@ -89,15 +95,15 @@ const Navbar = () => {
                 </div>
             </div>}
           </li>
-          <li className="nav-item">
+          <li className="nav-item text-white">
             {web3Ctx.account &&
               <a
-                className="nav-link small"
+                className="nav-link small text-white"
                 href={`https://explorer.ethoprotocol.com/address/${web3Ctx.account}`}
                 target="blank"
                 rel="noopener noreferrer"
               >
-                {web3Ctx.account}
+                Connected {web3Ctx.account.substring(0,6)}...
               </a>}
             {!web3Ctx.account &&
               <button

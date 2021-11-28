@@ -11,6 +11,8 @@ import NFTMarketplace from './abis/NFTMarketplace.json';
 import MintForm from "./components/Content/MintNFT/MintForm";
 import logo from "./img/logo2.PNG";
 import Spinner from "./components/Layout/Spinner";
+import "./app.css";
+import ethonft_headline from "./img/ethonft_headline.png";
 
 
 const App = () => {
@@ -277,8 +279,15 @@ const Homepage = () => {
   return (
   <React.Fragment>
     {showNavbar && <Navbar />}
-    <div>
-      <h2>Test</h2>
+    <div class="container-fluid container-main bg-dark h">
+      <div className="row text-white">
+        <div className="col w-50">
+          <img src={ethonft_headline} alt="Decentrlized Marketplace" width="100%"></img>
+        </div>
+        <div className="col w-50">
+          Column 2
+        </div>
+      </div>
     </div>
     
   </React.Fragment>
