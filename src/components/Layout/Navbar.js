@@ -73,7 +73,7 @@ const Navbar = () => {
               <a className="nav-link text-white" aria-current="page" href="/">Home</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link text-white" href="Explore">Explore</a>
+              <a className="nav-link text-white" href="explore">Explore</a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-white" href="mint">Mint</a>
