@@ -108,11 +108,12 @@ const CollectionProvider = props => {
 
         const metadata = await response.json();
         const owner = await contract.methods.ownerOf(i + 1).call();
-
+        console.log("%s: %s",i ,JSON.stringify(metadata));
         collection = [{
           id: i + 1,
           title: metadata.properties.name.description,
           img: metadata.properties.image.description,
+          description: metadata.properties.description.description,
           owner: owner
         }, ...collection];
       }catch {

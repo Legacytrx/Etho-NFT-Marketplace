@@ -70,9 +70,11 @@ const NFTCollection = () => {
           <div key={key} className="col-md-2 m-3 pb-3 card border-info">
             <div className={"card-body"}>       
               <h5 className="card-title">{NFT.title}</h5>
+              <p>{NFT.description}</p>
             </div>
-            <img src={`https://data.ethoprotocol.com/ipfs/${NFT.img}`} className="card-img-bottom" alt={`NFT ${key} not on ethofs yet, please wait.`} />                       
-            <p className="fw-light fs-6">{`${owner.substr(0,7)}...${owner.substr(owner.length - 7)}`}</p>
+            <img src={`https://ipfs.infura.io/ipfs/${NFT.img}`} className="card-img-bottom" alt={`NFT ${key} not on ethofs yet, please wait.`} />                       
+            <p className="fw-light fs-6">Owner: {`${owner.substr(0,7)}...${owner.substr(owner.length - 7)}`}</p>
+			<p className="card-text"><a href={`https://data.ethoprotocol.com/ipfs/${NFT.img}`} target="_blank">HOSTED ON ETHOFS</a></p>	
             {index !== -1 ?
               owner !== web3Ctx.account ?
                 <div className="row">
@@ -80,7 +82,7 @@ const NFTCollection = () => {
                     <button onClick={buyHandler} value={index} className="btn btn-success">BUY</button>
                   </div>
                   <div className="col-7 d-flex justify-content-end">
-                    <img src={eth} width="25" height="25" className="align-center float-start" alt="price icon"></img>                
+                    <img src={eth} width="25" height="25" className="align-center float-start" alt="price icon"></img>
                     <p className="text-start"><b>{`${price}`}</b></p>
                   </div>
                 </div> :
