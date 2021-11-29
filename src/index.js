@@ -6,7 +6,7 @@ import CollectionProvider from './store/CollectionProvider';
 import MarketplaceProvider from './store/MarketplaceProvider';
 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {Homepage, App, Mintpage} from './App'; //new
+import {Homepage, App, Mintpage, MyNFTpage} from './App'; //new
 
 
 ReactDOM.render(
@@ -19,6 +19,7 @@ ReactDOM.render(
                   <Route exact path="/" element={<Homepage/>}/>
                   <Route exact path="/explore" element={<App/>}/>
                   <Route exact path="/mint" element={<Mintpage/>}/>
+                  <Route exact path="/mynft" element={<MyNFTpage/>}/>
               </Routes>
           </Router>
 
