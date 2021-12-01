@@ -48,7 +48,7 @@ const Navbar = () => {
 
   
   return (
-    <nav className="navbar navbar-custom navbar-expand-sm navbar-light  p-0" >
+    <nav className="navbar navbar-custom navbar-expand-sm navbar-light  p-0 navbar-center" >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           <img src={ethonft} alt="" width="75%"></img>
@@ -68,7 +68,7 @@ const Navbar = () => {
         </div>
   
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbar-center">
              <li className="nav-item">
               <a className="nav-link text-white" href="explore">Explore</a>
             </li>
