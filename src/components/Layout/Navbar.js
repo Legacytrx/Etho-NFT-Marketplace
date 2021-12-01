@@ -69,17 +69,20 @@ const Navbar = () => {
   
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a className="nav-link text-white" aria-current="page" href="/">Home</a>
-            </li>
-            <li className="nav-item">
+             <li className="nav-item">
               <a className="nav-link text-white" href="explore">Explore</a>
             </li>
             <li className="nav-item">
               <a className="nav-link text-white" href="mint">Mint</a>
             </li>
+            {web3Ctx.account &&
+              <li className="nav-item">
+                <a className="nav-link text-white" aria-current="page" href="/mynft">MyNFT</a>
+              </li>
+            }
   
-          <li className="nav-item">
+  
+            <li className="nav-item">
             {marketplaceCtx.userFunds > 0 && !fundsLoading &&
               <button
                 type="button"
