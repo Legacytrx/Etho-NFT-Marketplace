@@ -407,16 +407,16 @@ const Homepage = () => {
   return (
   <React.Fragment>
     {showNavbar && <Navbar />}
-    <div class="container-fluid container-main bg-dark h">
+    <div className="container-fluid container-main bg-dark h">
       <div className="row text-white align-items-center">
-        <div className="col w-50">
+        <div className="col-md">
           <img src={ethonft_headline} alt="Decentralized Marketplace" width="100%"></img>
-          <p class="font-monospace text-white fw-bold p-3">
+          <p className="font-monospace text-white fw-bold p-3">
             Art is subjective, freedom is not
           </p>
-          <p class="p-3">With ETHO You can mint, sell, buy and store NFTs on one and the same blockchain on a 100% decentralized blockchain.</p>
+          <p className="p-3">With ETHO You can mint, sell, buy and store NFTs on one and the same blockchain on a 100% decentralized blockchain.</p>
         </div>
-        <div className="col w-50">
+        <div className="col-md">
           <img src={ethonft_gallery} alt="Decentrlized Marketplace" width="100%"></img>
         </div>
       </div>

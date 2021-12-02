@@ -48,12 +48,13 @@ const Navbar = () => {
 
   
   return (
+    
+    
     <nav className="navbar navbar-custom navbar-expand-sm navbar-light  p-0 navbar-center" >
       <div className="container-fluid">
         <a className="navbar-brand" href="/">
           <img src={ethonft} alt="" width="75%"></img>
         </a>
-  
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -66,7 +67,6 @@ const Navbar = () => {
             <button className="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
-  
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0 navbar-center">
              <li className="nav-item">
@@ -80,8 +80,6 @@ const Navbar = () => {
                 <a className="nav-link text-white" aria-current="page" href="/mynft">MyNFT</a>
               </li>
             }
-  
-  
             <li className="nav-item">
             {marketplaceCtx.userFunds > 0 && !fundsLoading &&
               <button
@@ -92,9 +90,9 @@ const Navbar = () => {
                 {`YOU SOLD AN ITEM! CLAIM ${formatPrice(marketplaceCtx.userFunds)} ETHO`}
               </button>}
             {fundsLoading &&
-              <div class="d-flex justify-content-center text-info">
-                <div class="spinner-border" role="status">
-                  <span class="sr-only"></span>
+              <div className="d-flex justify-content-center text-info">
+                <div className="spinner-border" role="status">
+                  <span className="sr-only"></span>
                 </div>
             </div>}
           </li>
@@ -119,9 +117,10 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-        </div>
+      </div>
     </nav>
-  );  
+
+);
 };
 
 export default Navbar;
